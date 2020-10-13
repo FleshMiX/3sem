@@ -23,10 +23,7 @@ void Write(const char* fifo_name)
 void Read(const char* fifo_name)
 {
 	int fd;
-	if ((fd = open(fifo_name, O_RDONLY)) < 0) {
-		printf("Can't open FIFO for reading\n");
-		exit(-1);
-	}
+	if ((fd = open(fifo_name, O_RDONLY)) < 0) exit(-1);
 
 	char message[SIZE + 1] = {};
 
