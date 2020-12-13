@@ -5,13 +5,13 @@
 int cur_pid;
 
 void signal1(int s) {
-  printf("Ot Korobki do nk\n");
+  printf("РТ\n");
   sleep(1);
   kill(cur_pid, SIGUSR2);
 }
 
 void signal2(int s) {
-  printf("Luchshe vseh FRTK!!!\n");
+  printf("Чемпион!!!\n");
   sleep(1);
   kill(cur_pid, SIGUSR1);
 }
